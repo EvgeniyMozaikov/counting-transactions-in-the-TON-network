@@ -25,3 +25,11 @@ void main() {
   IPCHandlerFactory.getHandler(sdkResponse);
   expect(true, responseCompleters[key]!.isCompleted);
 }
+
+      var itemDoesntExists = ItemDoesNotExistException(
+      MOCK_ITEM_ID,
+      MOCK_ERR_CODE,
+    );
+    expect(MOCK_ITEM_ID, itemDoesntExists.item);
+    expect(MOCK_ERR_CODE, itemDoesntExists.errMsg);
+  });
